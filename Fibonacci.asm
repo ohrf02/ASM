@@ -64,7 +64,7 @@ _start:
 	push dword ptr 11
 	call Fibo
 	
-	;Fibo returns the fibonacci-sequence's value of the given index.
+	;Fibo returns the fibonacci-sequence's value of the given index in the eax register.
 	print str$(eax)
 	
 	;In cdecl the function does not clean the given parameters in the stack (so the user needs to do it).
