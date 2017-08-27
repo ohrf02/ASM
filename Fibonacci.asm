@@ -5,13 +5,11 @@ option casemap: none ;case sensitive
 include \masm32\include\masm32rt.inc  
 includelib \masm32\lib\masm32rt.lib
 
-
 ;;Code
 .code
 
 ;The proc returns the value of the given index in the fibonacci-sequence.
 Fibo:
-
 	push ebp
 	mov ebp, esp
 	
@@ -50,10 +48,8 @@ Fibo:
 	
 return_1:
 	mov eax, 1
-	
-	
+		
 end_of_fibo:	
-
 	pop ecx
 	add esp, 8
 	
@@ -62,9 +58,8 @@ end_of_fibo:
 
 	ret
 	
-
+	
 _start:
-
 	;The index of the requested fibonacci number.
 	push dword ptr 11
 	call Fibo
@@ -74,10 +69,8 @@ _start:
 	
 	;In cdecl the function does not clean the given parameters in the stack (so the user needs to do it).
 	add esp, 4
-	
-	
+		
 end_prog:
     push eax 
     call ExitProcess
 end _start
-" " 
